@@ -5,82 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-a:hover {
-  text-decoration: none;
-}
-.d-flex {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-.gradient {
-  position: relative;
-}
-.gradient:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: -webkit-linear-gradient(rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
-  background: -o-linear-gradient(rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
-  background: linear-gradient(rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6fce38a', endColorstr='#e6f38181', GradientType=0);
-  /* IE6-9 */
-}
 body {
   font-family: 'Conv_Questrial-Regular';
 }
@@ -419,6 +343,69 @@ body {
   align-items: center;
   padding-bottom: 50px;
 }
+.section-5 .connect-section .group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 50px;
+}
+.section-5 .connect-section input {
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: black;
+  color: white;
+}
+.section-5 .connect-section input:focus {
+  outline: none;
+}
+.section-5 .connect-section label {
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.section-5 .connect-section input:focus ~ label,
+.section-5 .connect-section input:valid ~ label {
+  top: -15px;
+  font-size: 14px;
+}
+.section-5 .connect-section .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.section-5 .connect-section .bar:before,
+.section-5 .connect-section .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: white;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  border-radius: 5px;
+}
+.section-5 .connect-section .bar:before {
+  left: 50%;
+}
+.section-5 .connect-section .bar:after {
+  right: 50%;
+}
+.section-5 .connect-section input:focus ~ .bar:before,
+.section-5 .connect-section input:focus ~ .bar:after {
+  width: 50%;
+}
 .section-5 .connect-section .title-connect-section {
   color: white;
   padding-top: 60px;
@@ -433,6 +420,13 @@ body {
   height: 50px;
   outline: 0px;
   color: white;
+}
+.section-5 .connect-section .form-connect-section:focus {
+  width: 45%;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 2px white;
 }
 .section-5 .connect-section .bottom-connect-section {
   margin-top: 40px;

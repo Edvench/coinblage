@@ -1,6 +1,6 @@
 @import 'fonts.less';
-@import 'variables.less';
-@import 'mixins.less';
+
+
 body
 {
 font-family: 'Conv_Questrial-Regular';
@@ -252,7 +252,7 @@ font-family: 'Conv_Questrial-Regular';
             color: white;
             padding-bottom: 40px;
             font-size:14px;
-            // font-weight: 900;
+           
         }
     }
     .main-menu-icon:hover 
@@ -264,7 +264,7 @@ font-family: 'Conv_Questrial-Regular';
 }
 .section-4
 {
-    // background-color: #00AC6B;
+    
     background-color: black;
     position: relative;
     padding-bottom: 180px;
@@ -276,7 +276,7 @@ font-family: 'Conv_Questrial-Regular';
         right: 0;
         bottom: 20;
         
-        // background-color:#00AC6B ;
+        
         background-color: black;
         &:after
         {
@@ -287,7 +287,7 @@ font-family: 'Conv_Questrial-Regular';
         width: 100%;
         transform: skewY(6deg);
         height: 12vw;
-        // background-color: #00AC6B;
+        
         background-color: black;
         }
         
@@ -428,6 +428,79 @@ font-family: 'Conv_Questrial-Regular';
         flex-direction: column;
         align-items: center;
         padding-bottom: 50px;
+        .group {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 50px;
+          }
+          
+          input {
+            
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background-color: black;
+            color: white;
+
+          }
+          input:focus {
+            outline: none;
+            
+          }
+          label {
+            color: #999;
+            font-size: 18px;
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            top: 15px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+          }
+          
+          
+          input:focus ~ label, input:valid ~ label {
+            top: -15px;
+            font-size: 14px;
+            
+          }
+          
+          
+         
+          .bar {
+            position: relative;
+            display: block;
+            width: 100%;
+          }
+          .bar:before, .bar:after {
+            content: "";
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            position: absolute;
+            background: white;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+            border-radius: 5px;
+          }
+          .bar:before {
+            left: 50%;
+          }
+          .bar:after {
+            right: 50%;
+          }
+          
+         
+          input:focus ~ .bar:before,
+          input:focus ~ .bar:after {
+            width: 50%;
+          }
         .title-connect-section
         {
             color: white;
@@ -446,6 +519,18 @@ font-family: 'Conv_Questrial-Regular';
             color:white;
 
         }
+        
+        .form-connect-section:focus
+        {
+            width: 45%;
+            color:white;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+            box-shadow: 0px 0px 4px 2px white;
+            
+        }
+        
+
         .bottom-connect-section
         {
             margin-top: 40px;
@@ -463,6 +548,8 @@ font-family: 'Conv_Questrial-Regular';
                 transition:all 0.5s ease;
             }
         }
+        
+        
     }
     .cell-section-5
     {
